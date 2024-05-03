@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffafcc;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container .startDate {
+    font-size: 15px;
+    color: rgba(96, 96, 96.5);
+    margin-bottom: 1em;
+}
+
+.container .search-info {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    gap: 1em;
+}
+
+.container input {
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.search-info button {
+    padding: .7em .8em;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.container h1 {
+    font-size: 30px;
+    margin-bottom: .7em;
+    font-weight: 600;
+}
+
+.container p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.check-box-gp {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container .input-box {
+    margin: 10px;
+}
+
+.container a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
