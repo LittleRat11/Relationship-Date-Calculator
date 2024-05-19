@@ -19,6 +19,7 @@ const anniCalculate = (date1, date2) => {
     let days = Math.round(diff / day);
     let months = Math.round(days / monthDays[monthDay]);
     let years = Math.floor(months / 12);
+    months = months > 12 ? months -= 12 : months
     if (yearCheck && monthCheck) {
         anniversary = `
         <h1>Happy Anniversary Day</h1>
