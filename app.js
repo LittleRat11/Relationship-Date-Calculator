@@ -1,9 +1,5 @@
 const searhBtn = document.querySelector("#searchBtn");
 const pastDate = document.querySelector("#anniDateInput");
-
-
-
-
 // *create Function calculate
 let today = new Date();
 let monthDays = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -25,34 +21,46 @@ const anniCalculate = (date1, date2) => {
         <h1>Happy Anniversary Day</h1>
         <img src="./images/In love-pana.png" alt="love1" class="img1">
         <p>It has been ${years} year and ${months} months and ${days} days since you started your relationship.</p>
-       <a href="index.html">Back</a>
+         <a href="index.html" id="back-btn">Back</a>
         `;
     } else if (yearCheck) {
         anniversary = `
         <h1>Happy Anniversary Day</h1>
          <img src="./images/In love-pana.png" alt="love1" class="img1">
         <p>It has been ${years} years and ${days} days since you started your relationship.</p>
-        <a href="index.html">Back</a>
+         <a href="index.html" id="back-btn">Back</a>
         `;
     } else if (monthCheck) {
         anniversary = `
         <h1>Happy Anniversary Day</h1>
          <img src="./images/In love-pana.png" alt="love1" class="img1">
         <p>It has been ${months} months and ${days} days since you started your relationship.</p>
-        <a href="index.html">Back</a>
+        <a href="index.html" id="back-btn">Back</a>
         `;
     } else {
         anniversary = `
         <h1>Happy Anniversary Day</h1>
         <img src="./images/In love-pana.png" alt="love1" class="img1">
         <p>It has been ${days} days since you started your relationship.</p>
-        <a href="index.html">Back</a>
+        <a href="index.html" id="back-btn">Back</a>
         `;
     }
     document.querySelector(".container").innerHTML = anniversary;
 }
+
+
+
 searhBtn.addEventListener("click", () => {
     const anniDate = pastDate.value;
+    if (!anniDate) {
+        anniversary = `
+        <img src="./images/404-1.png" alt="love1" class="img1">
+        <p> Please Input Your anniversary date..</p>
+        <a href="index.html" id="back-btn">Back</a>
+    `;
+        document.querySelector(".container").innerHTML = anniversary;
+    }
+
     let past = new Date(anniDate);
     anniCalculate(past, today);
 });
